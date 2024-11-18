@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "4d7f6712-7216-4a7c-b1e9-b80317e9c84f",
+		"name": "PaymentModule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38328661"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rablo.cloud/student/payment//bankAccount/RAB0001",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"",
+						"bankAccount",
+						"RAB0001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rablo.cloud/student/payment//bankAccount/:studentId",
+							"protocol": "https",
+							"host": [
+								"rablo",
+								"cloud"
+							],
+							"path": [
+								"student",
+								"payment",
+								"",
+								"bankAccount",
+								":studentId"
+							],
+							"variable": [
+								{
+									"key": "studentId",
+									"value": "RAB0001"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 12 Nov 2024 15:38:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10c-6GrP5KqE+eYOj13lFJt2Rd4+JFM\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "connect.sid=s%3Absm8Ykxhtt7kmhLJkPpihvfOEOAApKCX.YN0RJ3uVQjGB%2FkJ7La505hSAgPa9CgpywC4bE2qjBdE; Path=/; HttpOnly"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=TA7sXXU6w8NEmADt7Mz95B5hLnWJDcHvrXswDm5x2P4XV14KA14fmb2sXYbOQntmA1EqrD%2BVnBnqKeLRBdb1luTRMk9h%2BPWczYFDiIARM8nPXH9aaolqpI8cDmwAUQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8e179c58ea4f3cbc-CDG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "server-timing",
+							"value": "cfL4;desc=\"?proto=TCP&rtt=312634&sent=5&recv=5&lost=0&retrans=0&sent_bytes=2810&recv_bytes=599&delivery_rate=12099&cwnd=183&unsent_bytes=0&cid=519839567f38605f&ts=631&x=0\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"_id\": \"66a4c2f0ad4eee785e3fb95b\",\n        \"studentId\": \"RAB0001\",\n        \"accountHolderName\": \"Jane Doe\",\n        \"accountNumber\": \"1234567890\",\n        \"ifsc\": \"ABC123456\",\n        \"branchCode\": \"001\",\n        \"createdAt\": \"2024-07-27T09:50:40.952Z\",\n        \"updatedAt\": \"2024-11-12T06:42:38.974Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \" studentId\" :\"RAB0001\",\r\n\"accountHolderName \":\"Jane Doe\",\r\n\"accountNumber\" :\"1234567890\",\r\n\"ifsc \":\"ABC123456\",\r\n\"branchCode \":\"001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/bankAccount/updateDetails/RAB001",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"bankAccount",
+						"updateDetails",
+						"RAB001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"studentId\" :\"RAB0001\",\r\n\"tutorName\": \"JOHN SIR\",\r\n\"tutorId \":\"RAB0005\" ,\r\n\"amount\" :\"400\",\r\n\"currency \": \"Indian Rupee\",\r\n\"receipt\":\"178\" ,\r\n\"modeOfPayment \":\"Net Banking\",\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/pay",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"razorpay_order_id\" :\"67\",\r\n\"razorpay_payment_id\" : \"89\",\r\n\"razorpay_signature\" :\"JOHNDOE\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/verify",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/paymentHistory/:studentId",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"paymentHistory",
+						":studentId"
+					],
+					"variable": [
+						{
+							"key": "studentId",
+							"value": "RAB0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/paymentHistory/month/:studentId",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"paymentHistory",
+						"month",
+						":studentId"
+					],
+					"variable": [
+						{
+							"key": "studentId",
+							"value": "RAB0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/paymentHistory/year/:studentId",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"paymentHistory",
+						"year",
+						":studentId"
+					],
+					"variable": [
+						{
+							"key": "studentId",
+							"value": "RAB0001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"studentId\": \"RAB0001\",\r\n \"accountHolderName\":\"John Doe\",\r\n \"accountNumber\":\"1234567890\",\r\n \"ifsc\":\"ABC123456\",\r\n \"branchCode \":\"001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rablo.cloud/student/payment/bankAccount",
+					"protocol": "https",
+					"host": [
+						"rablo",
+						"cloud"
+					],
+					"path": [
+						"student",
+						"payment",
+						"bankAccount"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"studentId\": \"RAB0001\",\r\n \"accountHolderName\":\"John Doe\",\r\n \"accountNumber\":\"1234567890\",\r\n \"ifsc\":\"ABC123456\",\r\n \"branchCode \":\"001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rablo.cloud/student/payment/bankAccount",
+							"protocol": "https",
+							"host": [
+								"rablo",
+								"cloud"
+							],
+							"path": [
+								"student",
+								"payment",
+								"bankAccount"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 12 Nov 2024 18:26:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-GML1mMlZZYk5LUR9hvg/wMWe8D8\""
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=bWStvCIUrKgCZMSTE2DOLiAT4sgiyPj8yS72EPfvdCPhFwG60s2jjt%2B%2B9pL8MihFkw9fSlNJFLXSXnDr8XRpyCNwKRcTExa%2FVEBAT9NMFCeIpha8VcduspGY9g%2Bwrg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "8e1891fe6e40e179-MRS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "server-timing",
+							"value": "cfL4;desc=\"?proto=TCP&rtt=163445&sent=34&recv=31&lost=0&retrans=0&sent_bytes=4447&recv_bytes=1466&delivery_rate=31108&cwnd=172&unsent_bytes=0&cid=1b6e5c4a2ee38818&ts=29134&x=0\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Fail\",\n    \"message\": \"BankAccount validation failed: branchCode: Path `branchCode` is required.\"\n}"
+				}
+			]
+		}
+	]
+}
